@@ -2,31 +2,39 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "../data/dummy";
 
+
 import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
+import ThemeSetting from "./ThemeSetting";
 
 const Sidebar = () => {
-
-  const { activeMenu, setActiveMenu, screenSize , setScreenSize} = useStateContext();
-
- 
+  const {
+    activeMenu,
+    setActiveMenu,
+    screenSize,
+    setScreenSize,
+    currentMode,
+    setMode,
+  } = useStateContext();
 
   const handleCloseSidebar = () => {
-    if(activeMenu && screenSize <= 900){
+    if (activeMenu && screenSize <= 900) {
       setActiveMenu(false);
     }
   };
 
-  const activeLink =
-    "flex items-center pt-3 pb-2.5 text-white text-md m-2";
+  const activeLink = "flex items-center pt-3 pb-2.5 text-red text-md m-2";
   const normalLink =
-    "flex items-center pt-3 pb-2.5 text-md text-white dark:text-gray-200 dark:hover:text-black m-2";
+    "flex items-center pt-3 pb-2.5 text-md dark:text-white text-black dark:text-gray-200 dark:hover:text-black m-2";
 
   return (
-    <div className="h-screen md: overflow-auto md:overflow-hidden md:hover:overflow-auto pb-10">
+    
+    <div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+      
       {activeMenu && (
         <>
           <div className="transition duration-1000 flex justify-between p-4">
+            
             <Link
               to="/"
               onClick={handleCloseSidebar}
@@ -37,7 +45,7 @@ const Sidebar = () => {
                   
                   "
             >
-              <span className="text-3xl md:m-4 relative md:right-2">A.</span>
+              <span className="text-3xl md:m-4 relative dark:text-white text-black md:right-2">A.</span>
             </Link>
             <button
               type="button"
@@ -45,14 +53,18 @@ const Sidebar = () => {
                hover:shadow
                 mt-4 block md:hidden
                 text-white"
-                onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+              onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
             >
               <MdOutlineCancel />
             </button>
+          
           </div>
           <div>
             {links.map((item) => (
-              <div key={item.title} className="flex flex-col items-center md:rotate-90 md:mb-4">
+              <div
+                key={item.title}
+                className="flex flex-col items-center md:rotate-90 md:mb-4 "
+              >
                 {item.links.map((Link) => (
                   <NavLink
                     to={`${Link.name}`}
@@ -68,6 +80,7 @@ const Sidebar = () => {
               </div>
             ))}
           </div>
+         <ThemeSetting/>
         </>
       )}
     </div>
