@@ -40,10 +40,10 @@ const Sidebar = () => {
               className="items-center
                   gap-3 ml-3 mt-4 flex 
                   text-xl font-extrabold
-                  tracking-tight text-white
-                  
+                  tracking-tight text-white            
                   "
             >
+              
               <span className="text-3xl md:m-4 relative dark:text-white text-black md:right-2">A.</span>
             </Link>
             <button
@@ -62,7 +62,7 @@ const Sidebar = () => {
             {links.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col items-center md:rotate-90 md:mb-4 "
+                className="flex flex-col items-center md:rotate-90 md:mb-4"
               >
                 {item.links.map((Link) => (
                   <NavLink

@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <div className="flex relative">
           {activeMenu ? (
-            <div className="transition-[width] duration-1000 ease-in-out md:transition-none w-full md:w-24 fixed sidebar bg-white dark:bg-black text-cyan-600">
+            <div className="transition-[width] delay-300 duration-1000 ease-in-out md:left-0 right-0 md:transition-none w-full md:w-24 fixed  sidebar bg-white dark:bg-black text-cyan-600">
               <Sidebar />
             </div>
           ) : (

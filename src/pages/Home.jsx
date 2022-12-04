@@ -10,7 +10,7 @@ const Home = () => {
   const bgMove = useRef();
 
   const handleMouseMove = (event) => {
-    const moveStretch = 25;
+    const moveStretch = 18;
     const width = moveStretch / window.innerWidth;
     const height = moveStretch / window.innerHeight;
 
@@ -42,7 +42,7 @@ const Home = () => {
       onMouseMove={handleMouseMove}
       className="bg-sky bg-slate-800 h-110 bg-cover w-screen top-0 fixed text-white "
     >
-      <div className="cursor-pointer lg:mr-24 mr-0">
+      <div className=" lg:mr-24 mr-0">
         <div className="flex flex-wrap lg:flex-nowrap justify-between py-14 px-11 ">
           <span className=" text-xl">Blaise Posmyou</span>
           <div
@@ -52,14 +52,17 @@ const Home = () => {
                 text-white"
           >
             {socialMedia.map((item) => (
-              <a href={item.address} key={item.key}>
+              <a 
+              className="cursor-pointer transition hover:rotate-45 delay-300 ease-in-out"
+              href={item.address} key={item.key}>
                 {item.icon}
               </a>
             ))}
           </div>
         </div>
-        <div className="flex flex-col ml-28">
-          <h1 className="text-9xl font-bold  underline-offset-8 before:content-[_hi]">Hello</h1>
+        <div className="flex flex-col m-28">
+          <h1 className="text-9xl font-bold tracking-widest  after:content-[''] after:border-2 after:bg-white after:rotate-180 after:w-96 after:block after:m-6">Hello</h1>
+
           <p className="text-xl">I specialize in responsive web design. , secure, fully personalized, with simple and intuitive cms .</p>
         </div>
         <div className="footer"></div>

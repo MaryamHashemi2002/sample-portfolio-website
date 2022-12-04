@@ -51,12 +51,12 @@ export const socialMedia = [
   {
     key: "Linkedin",
     icon: <AiFillLinkedin />,
-    address: "https://www.blaiseposmyouck.com/",
+    address: "https://www.linkedin.com/in/alireza-janbaz/",
   },
   {
     key: "Medium",
     icon: <BsMedium />,
-    address: "https://www.blaiseposmyouck.com/",
+    address: "https://medium.com/@alirezajanbaz69",
   },
   {
     key: "Telegram",
@@ -66,6 +66,6 @@ export const socialMedia = [
   {
     key: "Github",
     icon: <AiFillGithub />,
-    address: "https://www.blaiseposmyouck.com/",
+    address: "https://github.com/Alireza7997/",
   },
 ];

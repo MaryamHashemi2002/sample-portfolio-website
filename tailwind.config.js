@@ -19,6 +19,7 @@ module.exports = {
       },
       borderWidth: {
         1: "1px",
+        "01": "0.4px"
       },
       borderColor: {
         color: "rgba(0, 0, 0, 0.1)",
@@ -33,6 +34,10 @@ module.exports = {
         1200: "1200px",
         1400: "1400px",
       },
+      backgroundSize: {
+        '24': '24px',
+        '16': '4rem',
+      },
       height: {
         80: "80px",
         110: "110vh",
@@ -44,9 +49,12 @@ module.exports = {
       backgroundImage: {
         "hero-pattern":
           "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
-        night: "url('../public/images/moon.png')",
-        day: "url('../public/images/sun.png')",
+        moon: "url('../public/images/moon.png')",
+        moonDark: "url('../public/images/moonDark.png')",
+        sun: "url('../public/images/sun.png')",
+        sunDark: "url('../public/images/sunDark.png')",
         sky: "url('../public/images/beautiful-low-angle-shot-forest-blue-starry-night-sky.jpg')",
+
       },
     },
   },
