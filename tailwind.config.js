@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       fontSize: {
         14: "14px",
+        "lg": "clamp(1.25rem, calc(1.375rem + (1.75 - 1.25) * ((100vw - 40rem) / (64 - 40))), 1.75rem)",
+        "md": "clamp(1.1rem, calc(1.2rem + (1.2 - 1.1) * ((100vw - 40rem) / (64 - 40))), 1.2rem)",
+        "sm": "clamp(1rem, calc(1.05rem + (1.05 - 1) * ((100vw - 40rem) / (64 - 40))), 1.05rem)",
       },
       backgroundColor: {
         "main-bg": "#FAFBFB",
@@ -19,7 +22,7 @@ module.exports = {
       },
       borderWidth: {
         1: "1px",
-        "01": "0.4px"
+        "01": "0.4px",
       },
       borderColor: {
         color: "rgba(0, 0, 0, 0.1)",
@@ -35,8 +38,8 @@ module.exports = {
         1400: "1400px",
       },
       backgroundSize: {
-        '24': '24px',
-        '16': '4rem',
+        24: "24px",
+        16: "4rem",
       },
       height: {
         80: "80px",
@@ -54,7 +57,6 @@ module.exports = {
         sun: "url('../public/images/sun.png')",
         sunDark: "url('../public/images/sunDark.png')",
         sky: "url('../public/images/beautiful-low-angle-shot-forest-blue-starry-night-sky.jpg')",
-
       },
     },
   },

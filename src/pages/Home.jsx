@@ -42,13 +42,16 @@ const Home = () => {
       onMouseMove={handleMouseMove}
       className="bg-sky bg-slate-800 h-110 bg-cover w-screen top-0 fixed text-white "
     >
-      <div className=" lg:mr-24 mr-0">
-        <div className="flex flex-wrap lg:flex-nowrap justify-between py-14 px-11 ">
-          <span className=" text-xl">Blaise Posmyou</span>
+      <div className="mr-24">
+        <div className="flex flex-wrap lg:flex-nowrap justify-between
+                 py-14 px-11 ">
+          <span className="text-md">Blaise Posmyou</span>
           <div
-            className="flex gap-5 text-xl white
+            className="gap-5 text-xl white
                hover:shadow
                 mt-2
+                md:flex
+                hidden
                 text-white"
           >
             {socialMedia.map((item) => (

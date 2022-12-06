@@ -36,7 +36,7 @@ function App() {
             activeMenu ? "md:ml-24" : "flex-2"
           }`}
         >
-          <div className="fixed md:z-auto z-10">
+          <div className="fixed right-0 top-6 md:z-auto z-10 ">
             <Navbar />
           </div>
           <div>

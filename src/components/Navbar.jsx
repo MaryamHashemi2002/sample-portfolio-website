@@ -8,7 +8,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
     type="buttom"
     onClick={customFunc}
     style={{ color }}
-    className="m-4 relative text-xl border p-3 block md:hidden hover:bg-light-gray"
+    className="m-4 relative text-xl border p-3 hover:bg-light-gray"
   >
     {icon}
   </button>
@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize <= 900) {
+    if (screenSize <= 768) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -37,11 +37,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex justify-between flex-row-reverse p-2 md:mx-6 relative">
+      <div className="p-2">
         <NavButton
           title="Menu"
-          customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-          
+          customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}        
           icon={<AiOutlineMenu />}
         />
       </div>
