@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <div className="flex relative">
           {activeMenu ? (
-            <div className="transition-[width] delay-300 duration-1000 ease-in-out md:left-0 right-0 md:transition-none w-full md:w-24 fixed  sidebar bg-white dark:bg-black text-cyan-600">
+            <div className="transition-[width] delay-300 duration-1000 ease-in-out md:left-0 right-0 md:transition-none w-full md:w-65 fixed  sidebar bg-white dark:bg-black dark:text-white">
               <Sidebar />
             </div>
           ) : (
@@ -33,10 +33,10 @@ function App() {
 
         <div
           className={`bg-main-bg  relative min-h-screen ${
-            activeMenu ? "md:ml-24" : "flex-2"
+            activeMenu ? "md:ml-65" : "flex-2"
           }`}
         >
-          <div className="fixed right-0 top-6 md:z-auto z-10 ">
+          <div className="fixed right-0 top-6 md:z-auto md:hidden z-10 ">
             <Navbar />
           </div>
           <div>

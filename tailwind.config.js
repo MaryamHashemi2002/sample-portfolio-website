@@ -3,29 +3,45 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      display: ["Open Sans", "sans-serif"],
-      body: ["Open Sans", "sans-serif"],
+      display: ["Open Sans", "sans-serif", "Europa,sans-serif"],
+      body: ["Open Sans", "sans-serif", "Europa,sans-serif"],
     },
     extend: {
       fontSize: {
-        14: "14px",
-        "lg": "clamp(1.25rem, calc(1.375rem + (1.75 - 1.25) * ((100vw - 40rem) / (64 - 40))), 1.75rem)",
-        "md": "clamp(1.1rem, calc(1.2rem + (1.2 - 1.1) * ((100vw - 40rem) / (64 - 40))), 1.2rem)",
-        "sm": "clamp(1rem, calc(1.05rem + (1.05 - 1) * ((100vw - 40rem) / (64 - 40))), 1.05rem)",
+        13: "13px",
+        lg: "clamp(1.25rem, calc(1.375rem + (1.75 - 1.25) * ((100vw - 40rem) / (64 - 40))), 1.75rem)",
+        md: "clamp(1.1rem, calc(1.2rem + (1.2 - 1.1) * ((100vw - 40rem) / (64 - 40))), 1.2rem)",
+        sm: "clamp(1rem, calc(1.05rem + (1.05 - 1) * ((100vw - 40rem) / (64 - 40))), 1.05rem)",
+      },
+      textColor: {
+        primary: "#3490dc",
+        secondary: "#ffed4a",
+        danger: "#e3342f",
+        "light-gray": "#bebebe",
       },
       backgroundColor: {
         "main-bg": "#FAFBFB",
         "main-dark-bg": "#20232A",
         "secondary-dark-bg": "#33373E",
-        "light-gray": "#F7F7F7",
+        "light-gray": "#bebebe",
+        "dark-gray": "#151515",
         "half-transparent": "rgba(0, 0, 0, 0.5)",
       },
       borderWidth: {
         1: "1px",
         "01": "0.4px",
+        "05": "0.5px",
       },
       borderColor: {
         color: "rgba(0, 0, 0, 0.1)",
+      },
+      margin: {
+        '5px': '5px',
+        65: "6.5rem",
+      },
+      padding: {
+        '5px': '5px',
+        paddingMenu: "0 1.2vw",
       },
       width: {
         400: "400px",
@@ -36,6 +52,7 @@ module.exports = {
         1000: "1000px",
         1200: "1200px",
         1400: "1400px",
+        65: "6.5rem",
       },
       backgroundSize: {
         24: "24px",
@@ -48,6 +65,9 @@ module.exports = {
       },
       minHeight: {
         590: "590px",
+      },
+      rotate: {
+        270: "270deg",
       },
       backgroundImage: {
         "hero-pattern":

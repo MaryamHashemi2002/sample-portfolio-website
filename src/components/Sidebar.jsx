@@ -21,7 +21,10 @@ const Sidebar = () => {
       setActiveMenu(false);
     }
   };
-
+  const activeLink =
+    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-dark-gray";
+  const normalLink =
+    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-light-gray";
   return (
     <div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (
@@ -51,18 +54,20 @@ const Sidebar = () => {
               <MdOutlineCancel />
             </button>
           </div>
-          <div>
+          <div className="flex md:flex-col-reverse mt-16">
             {links.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col items-center md:rotate-90 md:mb-4"
+                className="md:rotate-270 p-10 "
               >
                 {item.links.map((Link) => (
                   <NavLink
                     to={`${Link.name}`}
                     key={Link.key}
                     onClick={handleCloseSidebar}
-                    className="flex items-center pt-3 pb-2.5 text-sm m-2"
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     <span> {Link.name}</span>
                   </NavLink>
@@ -70,7 +75,7 @@ const Sidebar = () => {
               </div>
             ))}
           </div>
-          <div>
+          <div className="relative">
             <ThemeSetting />
           </div>
         </>

@@ -4,10 +4,9 @@ import { useStateContext } from "../contexts/ContextProvider";
 const ThemeSetting = () => {
   const { currentMode, setMode } = useStateContext();
 
-  return ( 
-    
-    <div className=" m-4"> 
-      <div className="mt-4">
+  return (
+    <div className="absolute right-0 left-9 top-12">
+      <div className="">
         <input
           type="radio"
           id="light"
@@ -18,12 +17,11 @@ const ThemeSetting = () => {
           checked={currentMode === "Light"}
         />
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label htmlFor="light" className="ml-2 text-md cursor-pointer after:content-[''] after:border-01 after:mt-4 after:bg-white after:rotate-180 after:w-3 after:block">
-          <div className="dark:bg-sun bg-sunDark  h-6 bg-no-repeat"></div>
+        <label htmlFor="light" className="cursor-pointer">
+          <div className="dark:bg-sun bg-sunDark h-6 bg-no-repeat"></div>
         </label>
       </div>
-      <div className="mt-2">
-
+      <div className="">
         <input
           type="radio"
           id="dark"
@@ -34,8 +32,8 @@ const ThemeSetting = () => {
           checked={currentMode === "Dark"}
         />
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
-        <div className="dark:bg-moon bg-moonDark bg-24 h-6 bg-no-repeat"></div>
+        <label htmlFor="dark" className="cursor-pointer">
+          <div className="dark:bg-moon bg-moonDark bg-24 h-6 bg-no-repeat"></div>
         </label>
       </div>
     </div>

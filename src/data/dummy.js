@@ -29,14 +29,14 @@ export const links = [
       },
     ],
   },
-  {
-    links: [
-      {
-        key: "con",
-        name: "Contact",
-      },
-    ],
-  },
+  // {
+  //   links: [
+  //     {
+  //       key: "con",
+  //       name: "Contact",
+  //     },
+  //   ],
+  // },
   {
     links: [
       {

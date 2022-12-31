@@ -26,6 +26,7 @@
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
+  /* background-color: #151515; */
 }
 
 /* color-picker style  */

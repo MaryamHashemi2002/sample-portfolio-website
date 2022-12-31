@@ -10,7 +10,7 @@ const Home = () => {
   const bgMove = useRef();
 
   const handleMouseMove = (event) => {
-    const moveStretch = 18;
+    const moveStretch = 10;
     const width = moveStretch / window.innerWidth;
     const height = moveStretch / window.innerHeight;
 
@@ -21,7 +21,7 @@ const Home = () => {
     const newvalueY = height * localY * -1 - 50;
 
     bgMove.current.style.backgroundPositionX = ` ${newvalueX}px`;
-    bgMove.current.style.backgroundPositionY = `${newvalueY}px`;
+    bgMove.current.style.backgroundPositionY = `${newvalueY / 5}px`;
 
     setLocalMousePos({
       x: newvalueX,
@@ -43,36 +43,51 @@ const Home = () => {
       className="bg-sky bg-slate-800 h-110 bg-cover w-screen top-0 fixed text-white "
     >
       <div className="mr-24">
-        <div className="flex flex-wrap lg:flex-nowrap justify-between
-                 py-14 px-11 ">
-          <span className="text-md">Blaise Posmyou</span>
+        <div
+          className="flex flex-wrap lg:flex-nowrap justify-between
+                 py-14 px-11 "
+        >
+          <span className="text-md">Alireza Janbaz</span>
           <div
             className="gap-5 text-xl white
                hover:shadow
                 mt-2
                 md:flex
                 hidden
-                text-white"
+                text-white
+                before:content-[''] before:border-01 before:bg-light-gray before:rotate-90 before:block before:mr-4"
           >
             {socialMedia.map((item) => (
-              <a 
-              className="cursor-pointer transition hover:rotate-45 delay-300 ease-in-out"
-              href={item.address} key={item.key}>
+              <a
+                className="cursor-pointer transition hover:rotate-45 delay-300 ease-in-out"
+                href={item.address}
+                key={item.key}
+              >
                 {item.icon}
               </a>
             ))}
           </div>
         </div>
         <div className="flex flex-col m-28">
-          <h1 className="text-9xl font-bold tracking-widest  after:content-[''] after:border-2 after:bg-white after:rotate-180 after:w-96 after:block after:m-6">Hello</h1>
+          <h1 className="text-9xl font-bold tracking-widest  after:content-[''] after:border-05 after:bg-white after:rotate-180 after:w-96 after:block after:m-6">
+            Hello
+          </h1>
 
-          <p className="text-xl">I specialize in responsive web design. , secure, fully personalized, with simple and intuitive cms .</p>
+          <p className="text-xl">
+            I specialize in responsive web design. , secure, fully personalized,
+            with simple and intuitive cms .
+          </p>
         </div>
-        <div className="footer"></div>
-
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="flex justify-between py-9 px-11">
+          <div>
+            <h2>E-mail :</h2>
+            <span>b.posmyouck@gmail.com</span>
+          </div>
+          <div>
+            <h2>Téléphone :</h2>
+            <span>(+33).6.77.67.67.27</span>
+          </div>
+        </div>
       </div>
     </div>
   );
