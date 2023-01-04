@@ -22,9 +22,9 @@ const Sidebar = () => {
     }
   };
   const activeLink =
-    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-dark-gray";
+    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-dark-gray after:content-[''] after:border-05 after:bg-white after:rotate-180 after:w-96 after:block after:mt-0 md:after:hidden after:border-black";
   const normalLink =
-    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-light-gray";
+    "font-semibold text-13 tracking-wide uppercase p-paddingMenu text-light-gray after:content-[''] after:border-05 after:bg-white after:rotate-180 after:w-96 after:block after:mt-0 md:after:hidden";
   return (
     <div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (
@@ -54,11 +54,11 @@ const Sidebar = () => {
               <MdOutlineCancel />
             </button>
           </div>
-          <div className="flex md:flex-col-reverse mt-16">
+          <div className="flex md:flex-col-reverse flex-col md:mt-16 md:gap-0 gap-4 mt-12 ml-12 md:ml-0">
             {links.map((item) => (
               <div
                 key={item.title}
-                className="md:rotate-270 p-10 "
+                className="md:rotate-270 md:p-10 "
               >
                 {item.links.map((Link) => (
                   <NavLink

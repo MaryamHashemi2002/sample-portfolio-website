@@ -6,7 +6,7 @@ import { socialMedia } from "../data/dummy";
 import { Link, NavLink } from "react-router-dom";
 
 const Home = () => {
-  const [localMousePos, setLocalMousePos] = useState({});
+  const { animatePage,localMousePos, setLocalMousePos} = useStateContext(); 
   const bgMove = useRef();
 
   const handleMouseMove = (event) => {
@@ -42,10 +42,9 @@ const Home = () => {
       onMouseMove={handleMouseMove}
       className="bg-sky bg-slate-800 h-110 bg-cover w-screen top-0 fixed text-white "
     >
-      <div className="mr-24">
-        <div
-          className="flex flex-wrap lg:flex-nowrap justify-between
-                 py-14 px-11 "
+      <div className="relative mr-24">
+        <div className="flex flex-wrap lg:flex-nowrap justify-between py-14 px-11 duration-500 transform transition-all translate-y-0 ease-out"
+          data-replace='{ "translate-y-0": "translate-y-24" }'
         >
           <span className="text-md">Alireza Janbaz</span>
           <div
@@ -55,7 +54,7 @@ const Home = () => {
                 md:flex
                 hidden
                 text-white
-                before:content-[''] before:border-01 before:bg-light-gray before:rotate-90 before:block before:mr-4"
+                before:content-[''] before:border-01 before:bg-light-gray before:rotate-90 before:block before:mr-4 before:opacity-50"
           >
             {socialMedia.map((item) => (
               <a
